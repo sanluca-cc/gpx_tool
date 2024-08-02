@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Test for fix_duplicate</name>
+    <desc>Excerpt from the route file for Grand Prix Cyclisme de Québec 2024, found in fix_duplicate_full.gpx</desc>
+    <trkseg>
+      <trkpt lat="46.80754" lon="-71.21442">
+        <ele>90.7</ele>
+      </trkpt>
+      <trkpt lat="46.807320000000004" lon="-71.21481">
+        <ele>92.3</ele>
+      </trkpt>
+      <trkpt lat="46.807320000000004" lon="-71.21481">
+        <ele>92.3</ele>
+      </trkpt>
+      <trkpt lat="46.8068850082171" lon="-71.21560251920414">
+        <ele>94.6</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,13 @@
+[workspace]
+members = ["common", "gpx_tool", "gpx_utils", "route_fixer"]
+resolver = "2"
+
+[workspace.package]
+authors = ["the sanluca.cc team <ciao@sanluca.cc>"]
+edition = "2021"
+license = "MIT"
+
+[workspace.dependencies]
+gpx = "0.10.0"
+geo = "0.28.0"
+log = "0.4"

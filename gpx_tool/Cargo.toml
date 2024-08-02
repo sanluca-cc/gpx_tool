@@ -1,0 +1,12 @@
+[package]
+name = "gpx_tool"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+
+[dependencies]
+route_fixer = { path = "../route_fixer" }
+gpx_utils = { path = "../gpx_utils" }
+env_logger = "0.11"
+log = { workspace = true }
+clap = { version = "4.5", features = ["derive"] }

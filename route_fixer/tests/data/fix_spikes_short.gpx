@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Test for fix_spikes</name>
+    <desc>Excerpt from the Strava file for Tour de France 2024 - Stage 21, found in fix_spikes_full.gpx</desc>
+    <trkseg>
+      <trkpt lat="43.751070000000006" lon="7.40469">
+        <ele>457.54</ele>
+      </trkpt>
+      <trkpt lat="43.751090000000005" lon="7.404490000000001">
+        <ele>457.54</ele>
+      </trkpt>
+      <trkpt lat="43.75106" lon="7.40432">
+        <ele>474.40000000000003</ele>
+      </trkpt>
+      <trkpt lat="43.751050000000006" lon="7.404310000000001">
+        <ele>457.77</ele>
+      </trkpt>
+      <trkpt lat="43.750980000000006" lon="7.40408">
+        <ele>458.38000000000005</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Test for fix_ele_zero</name>
+    <desc>Excerpt from the Strava file for Tour de France 2024 - Stage 3, found in fix_ele_zero_full.gpx</desc>
+    <trkseg>
+      <trkpt lat="44.99662000000001" lon="9.016350000000001">
+        <ele>94.16000000000001</ele>
+      </trkpt>
+      <trkpt lat="44.99649" lon="9.01632">
+        <ele>94.16000000000001</ele>
+      </trkpt>
+      <trkpt lat="44.99638" lon="9.01637">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="44.99592251262431" lon="9.015387476443168">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="44.99546501682449" lon="9.014404968574357">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="44.995007512600765" lon="9.013422476393357">
+        <ele>95.63000000000001</ele>
+      </trkpt>
+      <trkpt lat="44.994550000000004" lon="9.012440000000002">
+        <ele>95.63000000000001</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
