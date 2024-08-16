@@ -1,8 +1,6 @@
-use std::{error::Error, fs::File, io::BufReader, path::Path};
-
-use gpx::read;
-
 use crate::GPXRoute;
+use gpx::read;
+use std::{error::Error, fs::File, io::BufReader, path::Path};
 
 pub fn read_gpx<P: AsRef<Path>>(path: P) -> Result<GPXRoute, Box<dyn Error>> {
     let file = File::open(path)?;

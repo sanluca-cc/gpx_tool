@@ -1,10 +1,8 @@
-use std::path::Path;
-
+use clap::Parser;
 use gpx_utils::{read_gpx, write_gpx};
 use log::{debug, error, info, LevelFilter};
 use route_fixer::fix_route;
-
-use clap::Parser;
+use std::path::Path;
 
 /// Simple program to greet a person
 #[derive(Parser, Debug)]

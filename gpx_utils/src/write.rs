@@ -1,10 +1,6 @@
-use std::{error::Error, fs::File, io::BufWriter, path::Path};
-
-use gpx::write;
-
-use gpx::{Gpx, GpxVersion, Track, TrackSegment};
-
 use crate::GPXRoute;
+use gpx::{write, Gpx, GpxVersion, Track, TrackSegment};
+use std::{error::Error, fs::File, io::BufWriter, path::Path};
 
 pub fn write_gpx<P: AsRef<Path>>(out_path: P, gpx_route: GPXRoute) -> Result<(), Box<dyn Error>> {
     let track_segment = TrackSegment {
