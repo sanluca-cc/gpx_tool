@@ -39,7 +39,11 @@ pub fn fix_ele_zero(route: Vec<Wpt>) -> Vec<Wpt> {
         let mut tmp_dist = 0.;
 
         for k in i..i + j {
-            debug!("Fixing ele_zero at {i}");
+            debug!(
+                "Fixing ele_zero at km {:.1}",
+                route_utils::route_length_along(&new_route, 0, i)
+            );
+
             let dist = new_route[k]
                 .point()
                 .haversine_distance(&new_route[k + 1].point());

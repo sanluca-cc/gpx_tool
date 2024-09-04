@@ -1,5 +1,5 @@
 [package]
-name = "route_fixer"
+name = "route_utils"
 version = "0.1.0"
 authors.workspace = true
 edition.workspace = true
@@ -9,7 +9,3 @@ license.workspace = true
 geo = { workspace = true }
 log = { workspace = true }
 common = { path = "../common" }
-route_utils = { path = "../route_utils" }
-
-[dev-dependencies]
-gpx_utils = { path = "../gpx_utils" }

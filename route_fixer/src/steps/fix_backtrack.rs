@@ -8,7 +8,6 @@ use log::debug;
 pub fn fix_backtrack(route: Vec<Wpt>) -> Vec<Wpt> {
     let mut new_route = route;
 
-    let mut orignal_index = 1;
     let mut i = 1;
 
     // First, fix backtrack where we get starting point via the last and next being the same
@@ -17,7 +16,11 @@ pub fn fix_backtrack(route: Vec<Wpt>) -> Vec<Wpt> {
         let next = new_route[i + 1].clone();
 
         if last.point() == next.point() {
-            debug!("Backtrack found at {orignal_index}");
+            debug!(
+                "Removing backtrack at km {:.1}",
+                route_utils::route_length_along(&new_route, 0, i)
+            );
+
             let mut j = 1;
 
             while new_route[i + j].point() == new_route[i - j].point() {
@@ -34,11 +37,8 @@ pub fn fix_backtrack(route: Vec<Wpt>) -> Vec<Wpt> {
         } else {
             i += 1;
         }
-
-        orignal_index += 1;
     }
 
-    orignal_index = 1;
     i = 1;
 
     // Second, fix single backtrack where we get starting point via the bearing
@@ -51,7 +51,10 @@ pub fn fix_backtrack(route: Vec<Wpt>) -> Vec<Wpt> {
         let bearing_from = current.point().haversine_bearing(next.point());
 
         if (bearing_to - bearing_from).abs().round() == 180. {
-            debug!("Backtrack found at {orignal_index}");
+            debug!(
+                "Removing bearing backtrack at km {:.1}",
+                route_utils::route_length_along(&new_route, 0, i)
+            );
             let mut j = 1;
 
             if new_route[i + j].point() != new_route[i - j].point() {
@@ -67,8 +70,6 @@ pub fn fix_backtrack(route: Vec<Wpt>) -> Vec<Wpt> {
         } else {
             i += 1;
         }
-
-        orignal_index += 1;
     }
 
     new_route

@@ -451,6 +451,16 @@ dependencies = [
  "geo",
  "gpx_utils",
  "log",
+ "route_utils",
+]
+
+[[package]]
+name = "route_utils"
+version = "0.1.0"
+dependencies = [
+ "common",
+ "geo",
+ "log",
 ]
 
 [[package]]

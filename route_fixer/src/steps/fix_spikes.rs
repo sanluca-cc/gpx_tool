@@ -23,7 +23,11 @@ pub fn fix_spikes(route: Vec<Wpt>) -> Vec<Wpt> {
             && grade_from.abs() > 25.
             && grade_from.signum() != grade_to.signum()
         {
-            debug!("Fixing spike at {i}");
+            debug!(
+                "Fixing spike at km {:.1}",
+                route_utils::route_length_along(&new_route, 0, i)
+            );
+
             let dist_full = dist_to + dist_from;
             let d_ele = next.ele() - last.ele();
 

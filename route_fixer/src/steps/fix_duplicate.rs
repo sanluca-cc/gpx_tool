@@ -7,7 +7,6 @@ use log::debug;
 pub fn fix_duplicate(route: Vec<Wpt>) -> Vec<Wpt> {
     let mut new_route = route;
 
-    let mut orignal_index = 0;
     let mut i = 0;
 
     while i < new_route.len() - 1 {
@@ -15,13 +14,15 @@ pub fn fix_duplicate(route: Vec<Wpt>) -> Vec<Wpt> {
         let next = new_route[i + 1].clone();
 
         if next.point() == current.point() {
-            debug!("Removing duplicate at {orignal_index}");
+            debug!(
+                "Removing duplicate at km {:.1}",
+                route_utils::route_length_along(&new_route, 0, i)
+            );
+
             new_route.remove(i + 1);
         } else {
             i += 1;
         }
-
-        orignal_index += 1;
     }
 
     new_route

@@ -1,5 +1,5 @@
 [workspace]
-members = ["common", "gpx_tool", "gpx_utils", "route_fixer"]
+members = ["common", "gpx_tool", "gpx_utils", "route_fixer", "route_utils"]
 resolver = "2"
 
 [workspace.package]
