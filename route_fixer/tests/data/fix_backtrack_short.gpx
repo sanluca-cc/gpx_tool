@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Test for fix_backtrack</name>
+    <desc>Excerpt from the Strava file for Tour de France Femmes avec Zwift - Stage 4, found in fix_backtrack_full.gpx</desc>
+    <trkseg>
+      <trkpt lat="50.548640000000006" lon="5.577140000000001">
+        <ele>197.74</ele>
+      </trkpt>
+      <trkpt lat="50.54916000000001" lon="5.576510000000001">
+        <ele>205.69</ele>
+      </trkpt>
+      <trkpt lat="50.549290000000006" lon="5.57626">
+        <ele>210.51000000000002</ele>
+      </trkpt>
+      <trkpt lat="50.54948" lon="5.575480000000001">
+        <ele>216.47000000000003</ele>
+      </trkpt>
+      <trkpt lat="50.549510000000005" lon="5.57535">
+        <ele>217.56000000000003</ele>
+      </trkpt>
+      <trkpt lat="50.54961" lon="5.5751100000000005">
+        <ele>218.52</ele>
+      </trkpt>
+      <trkpt lat="50.549800000000005" lon="5.574770000000001">
+        <ele>220.2</ele>
+      </trkpt>
+      <trkpt lat="50.54961" lon="5.5751100000000005">
+        <ele>218.52</ele>
+      </trkpt>
+      <trkpt lat="50.549510000000005" lon="5.57535">
+        <ele>217.56000000000003</ele>
+      </trkpt>
+      <trkpt lat="50.54948" lon="5.575480000000001">
+        <ele>216.47000000000003</ele>
+      </trkpt>
+      <trkpt lat="50.549510000000005" lon="5.57535">
+        <ele>217.56000000000003</ele>
+      </trkpt>
+      <trkpt lat="50.54961" lon="5.5751100000000005">
+        <ele>218.52</ele>
+      </trkpt>
+      <trkpt lat="50.54991000134377" lon="5.574560003410668">
+        <ele>220.33</ele>
+      </trkpt>
+      <trkpt lat="50.55021000000001" lon="5.57401">
+        <ele>216.50000000000003</ele>
+      </trkpt>
+      <trkpt lat="50.55033" lon="5.573580000000001">
+        <ele>212.09000000000003</ele>
+      </trkpt>
+      <trkpt lat="50.550560000000004" lon="5.5724">
+        <ele>200.81</ele>
+      </trkpt>
+      <trkpt lat="50.55064" lon="5.57216">
+        <ele>198.46</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

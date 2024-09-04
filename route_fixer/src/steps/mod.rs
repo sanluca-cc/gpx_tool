@@ -1,8 +1,8 @@
+mod fix_backtrack;
+pub use fix_backtrack::fix_backtrack;
+
 mod fix_duplicate;
 pub use fix_duplicate::fix_duplicate;
-
-mod fix_pointspike;
-pub use fix_pointspike::fix_pointspike;
 
 mod fix_spikes;
 pub use fix_spikes::fix_spikes;

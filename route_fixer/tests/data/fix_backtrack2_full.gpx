@@ -2,7 +2,7 @@
 <gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
   <trk>
     <name>BEMER Cyclassics 2024</name>
-    <desc>Test for fix_pointspike</desc>
+    <desc>Test for fix_backtrack</desc>
     <trkseg>
       <trkpt lat="53.557348" lon="10.003153">
         <ele>5</ele>

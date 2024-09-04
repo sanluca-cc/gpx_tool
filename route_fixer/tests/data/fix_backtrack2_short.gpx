@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
   <trk>
-    <name>Test for fix_pointspike</name>
-    <desc>Excerpt from the route file for BEMER Cyclassics 2024, found in fix_pointspike_full.gpx</desc>
+    <name>Test for fix_backtrack</name>
+    <desc>Excerpt from the route file for BEMER Cyclassics 2024, found in fix_backtrack2_full.gpx</desc>
     <trkseg>
       <trkpt lat="53.55065" lon="9.99625">
         <ele>9</ele>
