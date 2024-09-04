@@ -50,8 +50,7 @@ pub fn fix_backtrack(route: Vec<Wpt>) -> Vec<Wpt> {
         let bearing_to = last.point().haversine_bearing(current.point());
         let bearing_from = current.point().haversine_bearing(next.point());
 
-        if (bearing_to - bearing_from).abs() > 179.99 && (bearing_to - bearing_from).abs() < 180.01
-        {
+        if (bearing_to - bearing_from).abs().round() == 180. {
             debug!("Backtrack found at {orignal_index}");
             let mut j = 1;
 
