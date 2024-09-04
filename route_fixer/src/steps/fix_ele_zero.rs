@@ -8,7 +8,7 @@ use log::debug;
 pub fn fix_ele_zero(route: Vec<Wpt>) -> Vec<Wpt> {
     let mut new_route = route;
 
-    for i in 1..new_route.len() - 1 {
+    for i in 1..new_route.len() {
         let last = new_route[i - 1].clone();
         let current = new_route[i].clone();
 

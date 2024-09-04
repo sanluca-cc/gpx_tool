@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
+  <trk>
+    <name>Test for fix_pointspike</name>
+    <desc>Excerpt from the route file for BEMER Cyclassics 2024, found in fix_pointspike_full.gpx</desc>
+    <trkseg>
+      <trkpt lat="53.55065" lon="9.99625">
+        <ele>9</ele>
+      </trkpt>
+      <trkpt lat="53.5507" lon="9.99771">
+        <ele>9</ele>
+      </trkpt>
+      <trkpt lat="53.5505954" lon="9.9977035">
+        <ele>9</ele>
+      </trkpt>
+      <trkpt lat="53.5507" lon="9.99771">
+        <ele>9</ele>
+      </trkpt>
+      <trkpt lat="53.55076" lon="9.99863">
+        <ele>10</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
