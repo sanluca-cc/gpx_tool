@@ -8,6 +8,7 @@ This project is a Cargo workspace with the following crates:
 - `gpx_utils`: A library crate with utilities to read and write GPX files via a common data structure.
 - `common`: A library with data structures and utilities shared between the other crates.
 - `route_fixer`: A library crate with utilities to fix different parts of a route.
+- `route_utils`: A library crate with utilities to work with and get information from routes.
 
 # Usage
 

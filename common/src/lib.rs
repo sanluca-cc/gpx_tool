@@ -1,9 +1,20 @@
+use geo::Point;
 use gpx::Waypoint;
 
 #[derive(Debug, Clone)]
 pub struct Wpt(Waypoint);
 
 impl Wpt {
+    pub fn new(lat: f64, lon: f64, ele: f64) -> Self {
+        let point = Point::new(lon, lat);
+        let mut waypoint = Waypoint::new(point);
+
+        waypoint.elevation = Some(ele);
+
+        Self(waypoint)
+    }
+
+    
     pub fn ele(&self) -> f64 {
         self.0.elevation.expect("Elevation is missing")
     }
