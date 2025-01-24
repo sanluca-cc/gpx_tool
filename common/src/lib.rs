@@ -14,7 +14,6 @@ impl Wpt {
         Self(waypoint)
     }
 
-    
     pub fn ele(&self) -> f64 {
         self.0.elevation.expect("Elevation is missing")
     }
