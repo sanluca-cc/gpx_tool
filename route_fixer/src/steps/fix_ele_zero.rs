@@ -29,9 +29,9 @@ pub fn fix_ele_zero(route: Vec<Wpt>) -> Vec<Wpt> {
             j += 1;
         }
 
-        let ls: LineString<f64> = new_route[i - 1..i + j + 1]
+        let ls: LineString<f64> = new_route[(i - 1)..=(i + j)]
             .iter()
-            .map(|wpt| wpt.coord())
+            .map(Wpt::coord)
             .collect();
         let dist_full = ls.length::<Haversine>();
         let d_ele = new_route[i + j].ele() - last.ele();
@@ -46,7 +46,7 @@ pub fn fix_ele_zero(route: Vec<Wpt>) -> Vec<Wpt> {
 
             let dist = Haversine::distance(new_route[k].point(), new_route[k + 1].point());
             tmp_dist += dist;
-            new_route[k].set_ele(last.ele() + (d_ele / dist_full) * tmp_dist);
+            new_route[k].set_ele((d_ele / dist_full).mul_add(tmp_dist, last.ele()));
         }
     }
 

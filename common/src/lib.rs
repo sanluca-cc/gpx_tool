@@ -36,13 +36,13 @@ impl Wpt {
 }
 
 impl From<Waypoint> for Wpt {
-    fn from(waypoint: Waypoint) -> Wpt {
-        Wpt(waypoint)
+    fn from(waypoint: Waypoint) -> Self {
+        Self(waypoint)
     }
 }
 
 impl From<&Waypoint> for Wpt {
-    fn from(waypoint: &Waypoint) -> Wpt {
-        Wpt(waypoint.clone())
+    fn from(waypoint: &Waypoint) -> Self {
+        Self(waypoint.clone())
     }
 }

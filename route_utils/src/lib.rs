@@ -3,8 +3,7 @@ use geo::{Haversine, Length, LineString};
 
 /// Returns the length of a route in kilometers, rounded to 1 decimal.
 pub fn route_length(route: &[Wpt]) -> f64 {
-    let linestring =
-        LineString::<f64>::from(route.iter().map(|wpt| wpt.coord()).collect::<Vec<_>>());
+    let linestring = LineString::<f64>::from(route.iter().map(Wpt::coord).collect::<Vec<_>>());
 
     linestring.length::<Haversine>() / 1000.
 }

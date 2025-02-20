@@ -31,7 +31,7 @@ pub fn fix_spikes(route: Vec<Wpt>) -> Vec<Wpt> {
             let dist_full = dist_to + dist_from;
             let d_ele = next.ele() - last.ele();
 
-            new_route[i].set_ele(last.ele() + (d_ele / dist_full) * dist_to);
+            new_route[i].set_ele((d_ele / dist_full).mul_add(dist_to, last.ele()));
         }
     }
 

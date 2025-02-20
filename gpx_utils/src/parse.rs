@@ -15,14 +15,14 @@ pub fn parse_gpx<R: Read>(gpx: R) -> Result<GPXRoute, Box<dyn Error>> {
         let segment = &track.segments[0];
         gpx_route.name.clone_from(&track.name);
 
-        for point in segment.points.iter() {
+        for point in &segment.points {
             gpx_route.waypoints.push(point.into());
         }
     } else if !gpx.routes.is_empty() {
         let route = &gpx.routes[0];
         gpx_route.name.clone_from(&route.name);
 
-        for point in route.points.iter() {
+        for point in &route.points {
             gpx_route.waypoints.push(point.into());
         }
     } else {

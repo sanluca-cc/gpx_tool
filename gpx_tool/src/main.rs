@@ -50,7 +50,7 @@ fn main() {
     let mut route = match read_gpx(&args.file) {
         Ok(route) => route,
         Err(e) => {
-            error!("Error reading GPX file: {}", e);
+            error!("Error reading GPX file: {e}");
             return;
         }
     };
@@ -65,7 +65,7 @@ fn main() {
         .unwrap_or_else(|| format!("{}-new.gpx", in_path.file_stem().unwrap().to_str().unwrap()));
 
     match write_gpx(outfile.clone(), route) {
-        Ok(_) => info!("Route written to {}", outfile),
-        Err(e) => error!("Error writing GPX file: {}", e),
+        Ok(()) => info!("Route written to {outfile}"),
+        Err(e) => error!("Error writing GPX file: {e}"),
     }
 }
