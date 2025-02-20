@@ -1,5 +1,5 @@
 use common::Wpt;
-use geo::{HaversineDistance, HaversineLength, LineString};
+use geo::{Bearing, Distance, Haversine, Length, LineString};
 use log::debug;
 
 /// Function to fix elevation data where elevation is zero.
@@ -16,7 +16,7 @@ pub fn fix_ele_zero(route: Vec<Wpt>) -> Vec<Wpt> {
             continue;
         }
 
-        let dist_to = last.point().haversine_distance(&current.point());
+        let dist_to = Haversine::bearing(last.point(), current.point());
         let grade_to = (current.ele() - last.ele()) / dist_to * 100.;
 
         if grade_to.abs() < 25. {
@@ -33,7 +33,7 @@ pub fn fix_ele_zero(route: Vec<Wpt>) -> Vec<Wpt> {
             .iter()
             .map(|wpt| wpt.coord())
             .collect();
-        let dist_full = ls.haversine_length();
+        let dist_full = ls.length::<Haversine>();
         let d_ele = new_route[i + j].ele() - last.ele();
 
         let mut tmp_dist = 0.;
@@ -44,9 +44,7 @@ pub fn fix_ele_zero(route: Vec<Wpt>) -> Vec<Wpt> {
                 route_utils::route_length_along(&new_route, 0, i)
             );
 
-            let dist = new_route[k]
-                .point()
-                .haversine_distance(&new_route[k + 1].point());
+            let dist = Haversine::distance(new_route[k].point(), new_route[k + 1].point());
             tmp_dist += dist;
             new_route[k].set_ele(last.ele() + (d_ele / dist_full) * tmp_dist);
         }

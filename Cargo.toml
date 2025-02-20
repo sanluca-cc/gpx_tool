@@ -4,10 +4,10 @@ resolver = "2"
 
 [workspace.package]
 authors = ["the sanluca.cc team <ciao@sanluca.cc>"]
-edition = "2021"
+edition = "2024"
 license = "MIT"
 
 [workspace.dependencies]
-gpx = "0.10.0"
-geo = "0.28.0"
+gpx = "0.10"
+geo = "0.29"
 log = "0.4"

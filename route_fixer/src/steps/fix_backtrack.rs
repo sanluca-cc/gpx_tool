@@ -1,5 +1,5 @@
 use common::Wpt;
-use geo::HaversineBearing;
+use geo::{Bearing, Haversine};
 use log::debug;
 
 /// Function to fix route data whenever the route backtracks.
@@ -47,8 +47,8 @@ pub fn fix_backtrack(route: Vec<Wpt>) -> Vec<Wpt> {
         let current = new_route[i].clone();
         let next = new_route[i + 1].clone();
 
-        let bearing_to = last.point().haversine_bearing(current.point());
-        let bearing_from = current.point().haversine_bearing(next.point());
+        let bearing_to = Haversine::bearing(last.point(), current.point());
+        let bearing_from = Haversine::bearing(current.point(), next.point());
 
         if (bearing_to - bearing_from).abs().round() == 180. {
             debug!(

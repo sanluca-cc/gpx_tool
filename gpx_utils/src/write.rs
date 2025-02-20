@@ -1,5 +1,5 @@
 use crate::GPXRoute;
-use gpx::{write, Gpx, GpxVersion, Track, TrackSegment};
+use gpx::{Gpx, GpxVersion, Track, TrackSegment, write};
 use std::{error::Error, fs::File, io::BufWriter, path::Path};
 
 pub fn write_gpx<P: AsRef<Path>>(out_path: P, gpx_route: GPXRoute) -> Result<(), Box<dyn Error>> {

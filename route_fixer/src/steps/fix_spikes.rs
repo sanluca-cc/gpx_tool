@@ -1,5 +1,5 @@
 use common::Wpt;
-use geo::HaversineDistance;
+use geo::{Distance, Haversine};
 use log::debug;
 
 /// Function to smoothen out the elevation spikes in the route.
@@ -13,8 +13,8 @@ pub fn fix_spikes(route: Vec<Wpt>) -> Vec<Wpt> {
         let current = new_route[i].clone();
         let next = new_route[i + 1].clone();
 
-        let dist_to = last.point().haversine_distance(&current.point());
-        let dist_from = current.point().haversine_distance(&next.point());
+        let dist_to = Haversine::distance(last.point(), current.point());
+        let dist_from = Haversine::distance(current.point(), next.point());
 
         let grade_to = (current.ele() - last.ele()) / dist_to * 100.;
         let grade_from = (next.ele() - current.ele()) / dist_from * 100.;

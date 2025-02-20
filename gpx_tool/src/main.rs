@@ -1,6 +1,6 @@
 use clap::Parser;
 use gpx_utils::{read_gpx, write_gpx};
-use log::{debug, error, info, LevelFilter};
+use log::{LevelFilter, debug, error, info};
 use route_fixer::fix_route;
 use std::path::Path;
 

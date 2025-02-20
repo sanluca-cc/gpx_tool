@@ -1,12 +1,12 @@
 use common::Wpt;
-use geo::{HaversineLength, LineString};
+use geo::{Haversine, Length, LineString};
 
 /// Returns the length of a route in kilometers, rounded to 1 decimal.
 pub fn route_length(route: &[Wpt]) -> f64 {
     let linestring =
         LineString::<f64>::from(route.iter().map(|wpt| wpt.coord()).collect::<Vec<_>>());
 
-    linestring.haversine_length() / 1000.
+    linestring.length::<Haversine>() / 1000.
 }
 
 /// Returns the length of a route from a given start and end index in kilometers.
